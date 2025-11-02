@@ -1,0 +1,298 @@
+[
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "bookId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "title",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "author",
+				"type": "string"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "registeredBy",
+				"type": "address"
+			}
+		],
+		"name": "BookRegistered",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "bookId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "bool",
+				"name": "onLoan",
+				"type": "bool"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "changeBy",
+				"type": "address"
+			}
+		],
+		"name": "LoanStatusChanged",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_title",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_author",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_publisher",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_year",
+				"type": "uint256"
+			}
+		],
+		"name": "registerBook",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_bookId",
+				"type": "uint256"
+			}
+		],
+		"name": "toggleLoanStatus",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "books",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "title",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "author",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "publisher",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "year",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "onLoan",
+				"type": "bool"
+			},
+			{
+				"internalType": "address",
+				"name": "registeredBy",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "booksIds",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAllBookIds",
+		"outputs": [
+			{
+				"internalType": "uint256[]",
+				"name": "",
+				"type": "uint256[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAllBooks",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "author",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "publisher",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "year",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "onLoan",
+						"type": "bool"
+					},
+					{
+						"internalType": "address",
+						"name": "registeredBy",
+						"type": "address"
+					}
+				],
+				"internalType": "struct Library.Book[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_bookId",
+				"type": "uint256"
+			}
+		],
+		"name": "getBook",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "id",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "title",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "author",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "publisher",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "year",
+				"type": "uint256"
+			},
+			{
+				"internalType": "bool",
+				"name": "onLoan",
+				"type": "bool"
+			},
+			{
+				"internalType": "address",
+				"name": "registeredBy",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getTotalBooks",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
